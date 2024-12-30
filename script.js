@@ -1,13 +1,14 @@
 
 
 let start_gamee = 1735776000*1000;
-let start =				1735776000*1000;
+let start =			1735417942*1000;
 let now = Date.now();
 const monthRanges = {
     0: "October - December",
     3: "January - March",
     6: "April - June",
-    9: "July - September"
+    9: "July - September",
+    12: "October - December"
 };
 
 let starting_year = 1908;
@@ -33,16 +34,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     
             // months elapsed
-            const months_elapsed = (years - Math.floor(years).toFixed(2)) * 12;
+            let months_elapsed = (years - Math.floor(years).toFixed(2)) * 12;
+            
+            let months_fix;
+            switch (months_elapsed) {
+                
+                case 0:
+                    months_fix = 9;
+                    break;
+                case 9:
+                    months_fix = 6;
+                    break;
+                case 6:
+                    months_fix = 3;
+                    break;
+                case 3:
+                    months_fix = 0;
+                    break;
+            }
+            console.log(months_fix);
+
+
             console.log(months_elapsed);
             const years_elapsed = Math.floor(years);
             console.log(years_elapsed);
             
             console.log(monthRanges[months_elapsed])
-
-            document.getElementById('date').innerHTML = "Day " + days + ", " + monthRanges[months_elapsed] + " " + current_year;
+            
+            document.getElementById('date').innerHTML = "Day " + days + ", " + monthRanges[months_elapsed] + " " + Math.floor(current_year);
             document.getElementById('years_elapsed').innerHTML = `${years_elapsed} ${years_elapsed === 1 ? "year" : "years"}`;
-            document.getElementById('months_elapsed').innerHTML = `${months_elapsed} ${months_elapsed === 1 ? "month" : "months"}`
+            document.getElementById('months_elapsed').innerHTML = `${months_fix} ${months_fix === 1 ? "month" : "months"}`
         } else {
             document.getElementById('date').innerHTML = "Day 0, purgatory";
         }
