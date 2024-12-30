@@ -1,7 +1,7 @@
 
 
 let start_gamee = 1735776000*1000;
-let start =			1735417942*1000;
+let start =			1735776000*1000;
 let now = Date.now();
 const monthRanges = {
     0: "October - December",
