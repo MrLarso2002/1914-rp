@@ -9,7 +9,8 @@
     <meta http-equiv="Expires" content="0" />   
     <title>Game 8 Ingame time checker</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="https://unpkg.com/@yaireo/relative-time@1.0.5/relative-time.min.js"></script>
 </head>
 <body>
     <div class="card_group" data-aos="fade-down">
@@ -17,7 +18,7 @@
             <div class="card_content">
                 <div class="text_subheader">Currently it is...</div>
                 <div class="text_header text_headerhighlight" id="date">Day 2, December 1904</div>
-                <div class="text_subheader">Since then <span class="text_subhighlight" id="years_elapsed">0 years</span> and <span class="text_subhighlight" id="months_elapsed">0 months</span> have elapsed ingame</div>
+                <div class="text_subheader" id="subheader">Since then <span class="text_subhighlight" id="years_elapsed">0 years</span> and <span class="text_subhighlight" id="months_elapsed">0 months</span> have elapsed ingame</div>
             </div>
             <div class="card_indicator">every 4 days</div>
         

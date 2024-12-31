@@ -1,5 +1,9 @@
 
 
+const relativeTime = new RelativeTime(); 
+
+
+
 let start_gamee = 1735776000*1000;
 let start =			1735776000*1000;
 let now = Date.now();
@@ -71,6 +75,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         console.log('Not yet started');
         document.getElementById('date').innerHTML = "The game hasn't begun yet";
+        document.getElementById('subheader').innerHTML ='';
+        document.getElementById('subheader').textContent = 'The game will begin ';
+        const mdiv = document.createElement('span');
+        mdiv.classList.add('text_subhighlight')
+        
+        document.getElementById('subheader').appendChild(mdiv);
+        mdiv.innerHTML = relativeTime.from(new Date(start));
       }
 });
 
