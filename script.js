@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Not yet started');
         document.getElementById('date').innerHTML = "The game hasn't begun yet";
         document.getElementById('subheader').innerHTML ='';
-        document.getElementById('subheader').textContent = 'The game will begin ';
+        document.getElementById('subheader').textContent = 'The game will approximately begin ';
         const mdiv = document.createElement('span');
         mdiv.classList.add('text_subhighlight')
         
