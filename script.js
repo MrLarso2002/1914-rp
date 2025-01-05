@@ -5,7 +5,7 @@ const relativeTime = new RelativeTime();
 
 
 let start_gamee = 1735776000*1000;
-let start =	1735819200*1000;
+let start =	1735732800*1000;
 let now = Date.now();
 const monthRanges = {
     0: "October - December",
