@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Set the image as the meta image
         document.getElementById('card_meta').setAttribute('content', dataURL);
+        document.getElementById('test').innerHTML ="e"
         
         console.log('Screenshot taken and set as meta image');
       });
