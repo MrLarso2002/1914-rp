@@ -83,6 +83,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('subheader').appendChild(mdiv);
         mdiv.innerHTML = relativeTime.from(new Date(start));
       }
+
+
+      html2canvas(document.getElementById('card-group')).then(function(canvas) {
+        // Convert canvas to image data URL
+        const dataURL = canvas.toDataURL('image/png');
+        
+        // Create a new Image object
+        const img = new Image();
+        img.src = dataURL;
+        
+        // Set the image as the meta image
+        document.getElementById('card_meta').setAttribute('content', dataURL);
+        
+        console.log('Screenshot taken and set as meta image');
+      });
+      
 });
 
 
